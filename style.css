@@ -16,7 +16,7 @@
 
 .skewedRect {
     background-color: rgb(1, 191, 255);
-    width: 600px; /* bigger */
+    width: 490px; 
     height: 600px;
     transform: skewY(-22deg);
     position: absolute;
