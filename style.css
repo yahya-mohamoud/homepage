@@ -8,8 +8,8 @@
 
 .skewedRect {
     background-color: rgb(1, 191, 255);
-    width: 554px;
-    height: 544px;
+    width: 122.8%;
+    height: 62vh;
     transform: skewY(-25deg);
     position: absolute;
     top: -150px;
@@ -17,7 +17,7 @@
     z-index: -1;
 }
 
-.hero img {
+.floatedImg {
     max-width: 340px;
     margin: 20px;
     position: relative;
@@ -43,6 +43,13 @@
 }
 
 
+.about {
+    background-color: white;
+    min-height: 360px;
+    margin: 40px 20px 0 0;
+    box-shadow: 1px 3px 6px black;
+}
+
 .icon {
     width: 35px;
     height: 35px;
@@ -66,9 +73,9 @@
 
 .projectGrid {
     display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 .project {
@@ -218,39 +225,65 @@ footer {
 }
 
 .image img {
-    max-width: 100%;
+    max-width: 94%;
     height: auto;
     object-fit: cover;
 }
 
 
+@media (max-width: 480px) {
+    .floatedImg {
+        max-width: 358px;
+        margin: 20px 20px 20px calc(100vw - 90vw);
+    }
+
+    .hero h1 {
+        top: 42%;
+        left: 33%;
+    }
+
+    .about {
+        background: transparent;
+        box-shadow: 0 0 0;
+        font-size: 1.2rem;
+        margin: 0 20px 10px 40px;
+    }
+}
+
 
 @media (min-width: 481px) {
-     .projectGrid {
+    .projectGrid {
         display: grid;
         grid-template-columns: minmax(400px, 1fr)
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 789px) {
     .hero {
-        min-width: 480px;
+        min-width: 470px;
+    }
+
+    .hero h1 {
+        color: #000000a5;
+        top: 6%;
+        left: 41%;
+        width: fit-content;
+        font-size: 2.6rem;
+    }
+
+    .floatedImg {
+        margin: -6px 19px 10px 20px;
     }
 
     .skewedRect {
-        min-width: 758px;
-        height: 632px;
+        width: 121.3%;
+        height: 65vh;
         transform: skewY(-20deg);
-    }
-
-    .about {
-        /* float: right; */
-        min-width: 200px;
     }
 
     .projectGrid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     }
 
@@ -265,8 +298,8 @@ footer {
 
     .about {
         background-color: white;
-        margin: 50px 40px 0px 40px;
-        box-shadow: 1px 2px black;
+        margin: 108px 25px 40px 65px;
+        box-shadow: 1px 2px 12px black;
         padding-bottom: 10px;
     }
 
@@ -279,7 +312,7 @@ footer {
     }
 
     .floatedImg {
-        margin: -20px 30px 30px 40px;
+        margin: -73px 30px 19px 41px;
         float: left;
         width: 300px;
     }
@@ -309,24 +342,21 @@ footer {
         margin-top: 20px;
     }
 
-    .hero img {
+    .floatedImg {
         float: left;
         margin-right: 0;
         width: 356px;
 
     }
 
-   
-
-    .project {
-        /* max-width: 300px; */
+    .projectGrid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
 
     .skewedRect {
-        min-width: 1108px;
-        min-height: 574px;
-        transform: skewY(-18deg);
-        top: -120px;
+        min-width: 130%;
+        min-height: 60vh;
+        transform: skewY(-14deg);
     }
 
     .contact {
@@ -350,5 +380,11 @@ footer {
     .image img {
         width: 400px;
         padding: 20px;
+    }
+}
+
+@media (min-width: 1103px) {
+    .skewedRect {
+        transform: skewY(-13deg);
     }
 }
