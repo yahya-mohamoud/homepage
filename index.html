@@ -10,19 +10,18 @@
 
 <body>
     <header>
-        <div class="skewedRectangle">
-
-        </div>
+        <div class="skewedRectangle"></div>
         <div class="profile">
-            <img src="profile_mobile_design.png" width="750px" height="500px" alt="avatar">
+            <img src="profile_mobile_design.png" class="float-img" width="750px" height="500px" alt="avatar">
             <h1>Ashley <span class="split">Williams</span></h1>
         </div>
-        <article class="info">
+        <div class="info">
             <h1>About me</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, ad! Temporibus, commodi soluta. Sit
                 provident quidem a enim vel, est non consequuntur reiciendis in quis, aut, minus quasi fuga accusamus.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum quisquam cum architecto asperiores tenetur delectus velit deserunt necessitatibus, fugit hic est quidem totam voluptatum repellendus debitis assumenda suscipit! Accusamus, dolore?
-            </p>
+                Lorem ipsum, <span class="hidden">dolor sit amet consectetur adipisicing elit. Ipsum quisquam cum architecto asperiores tenetur delectus velit deserunt necessitatibus, fugit hic est quidem totam voluptatum repellendus debitis assumenda suscipit! Accusamus, dolore? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus dolore iusto officia. Cumque doloremque expedita alias similique aspernatur iusto totam, nobis consequatur quibusdam voluptate enim iste beatae harum tempora nesciunt.
+  </span>          </p>
+            
             <div class="icons">
                 <div class="icon">
                     <a href="https://www.linkedin.com/in/yahya-moha-3a">
@@ -62,8 +61,9 @@
                     </a>
                 </div>
             </div>
-        </article>
+        </div>
     </header>
+    
     <main>
         <h2>My Work</h2>
         <section class="workSection">
@@ -311,14 +311,17 @@
         </section>
     </main>
     <footer>
-        <h1>Contact me</h1>
-        <p class="paraOne">Please Get in Touch if you think our work could be mutually beneficial!</p>
-        <address>1234 Random Road</address>
-        <address>Random Town, NoWhere 12345</address>
+        <div class="contact-container">
+            <div class="contact">
+            <h1>Contact me</h1>
 
-        <p class="paraTwo">555-555-5555</p>
-        <p class="paraThree">ashleywilliams@fakeemail.com</p>
-       <div class="footer-icons">
+            <p class="paraOne">Please Get in Touch if you think our work could be mutually beneficial!</p>
+            <address>1234 Random Road</address>
+            <address>Random Town, NoWhere 12345</address>
+            
+            <p class="paraTwo">555-555-5555</p>
+            <p class="paraThree">ashleywilliams@fakeemail.com</p>
+            <div class="footer-icons">
                 <div class="ft-icon">
                     <a href="https://www.linkedin.com/in/yahya-moha-3a">
                         <svg viewBox="0 0 128 128">
@@ -326,7 +329,7 @@
                                 d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z">
                             </path>
                             <path fill="#fff"
-                                d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z">
+                            d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z">
                             </path>
                         </svg>
                     </a>
@@ -344,7 +347,7 @@
                             </g>
                         </svg>
                     </a>
-
+                    
                 </div>
                 <div class="ft-icon">
 
@@ -357,9 +360,11 @@
                     </a>
                 </div>
             </div>
+        </div>
 
             <div class="profile-ft">
                 <img src="profile_mobile_design.png" width="400px" height="400px" alt="">
+            </div>
             </div>
     </footer>
 </body>

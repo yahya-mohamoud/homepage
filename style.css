@@ -1,18 +1,19 @@
-:root{
+:root {
     --cl-blue: #23B9DC;
     --cl-white: #fff;
-    
 
-  
+
+
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* outline: 2px solid red !important; */
 }
 
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -21,11 +22,11 @@ header {
 }
 
 .skewedRectangle {
-    min-height: 430px;
+    min-height: 580px;
     background-color: var(--cl-blue);
     transform: skewY(-22deg);
     position: absolute;
-    top: -88px;
+    top: min(-88px, -131px);
     left: 0;
     right: 0;
     z-index: -1;
@@ -44,7 +45,7 @@ header {
     max-width: 100%;
     height: auto;
     margin: 2rem 0;
-    aspect-ratio:  1;
+    aspect-ratio: 1;
     object-fit: contain;
 }
 
@@ -56,14 +57,14 @@ header {
     left: 9vw;
     width: 10ch;
     text-shadow: -3px 1px 1px black;
-}   
+}
 
 .split {
     font-size: clamp(3rem, 14.26vw + 0.548rem, 13rem);
 }
 
 .info {
-    font-size: var(--font-sz-md);
+    font-size: clamp(0.8rem, 2.42vw + 0.319rem, 2.5rem);
     padding: 1.4rem;
     margin: auto;
 }
@@ -71,14 +72,13 @@ header {
 .info h1 {
     text-align: center;
     font-size: clamp(1.4rem, 1.569vw + 1.386rem, 2.5rem);
-
 }
 
 .info p {
     padding: 1rem 0;
 }
 
-.icons{
+.icons {
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -102,23 +102,24 @@ main h2 {
 }
 
 .workSection {
-     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
+    gap: 1rem;
+    padding: 1rem;
+    place-items: center;
 }
 
 .workCard {
     width: 100%;
     min-height: 250px;
     min-width: 250px;
-    max-width: clamp(340px, 355px, 360px);
     border-radius: 10px;
     box-shadow: -1px 1px 8px 0px rgba(0, 0, 0, 0.664);
 }
+
 .imgPlaceholder {
-    width: 100%;
+    /* width: 100%; */
     height: 200px;
     background-color: #23B9DC;
     border-radius: 10px;
@@ -128,7 +129,7 @@ main h2 {
     color: white;
     width: 15ch;
     text-align: center;
-    margin:  auto;
+    margin: auto;
 }
 
 .one {
@@ -140,15 +141,15 @@ main h2 {
 }
 
 
-.three{
+.three {
     background-color: rgb(123, 194, 236);
 }
 
-.four{
+.four {
     background-color: rgb(234, 154, 236);
 }
 
-.five{
+.five {
     background-color: rgb(147, 123, 236);
 }
 
@@ -162,7 +163,7 @@ main h2 {
     padding: 0.7rem;
 }
 
-.cardIcons svg{
+.cardIcons svg {
     width: 30px;
     height: 30px;
 }
@@ -174,11 +175,11 @@ main h2 {
     margin: 0.3rem;
 }
 
-.cardInfo{
+.cardInfo {
     padding: 0.5rem;
 }
 
-footer{
+footer {
     background-color: #23B9DC;
     color: white;
 }
@@ -207,15 +208,81 @@ address {
     margin: 0.2rem 1rem 0.4rem;
 }
 
-.paraTwo, .paraThree {
+.paraTwo,
+.paraThree {
     margin: 0.3rem 1rem;
 }
 
-.profile-ft img{
+.profile-ft img {
     width: 100%;
     height: auto;
-    aspect-ratio:  1 / 1 ;
+    aspect-ratio: 1 / 1;
     /* object-fit: contain; */
     /* background-position: center; */
     overflow: hidden;
+}
+
+@media (min-width: 600px) {
+    .skewedRectangle {
+        min-height: 800px;
+        min-width: 500px;
+        top: -250px;
+    }
+
+    .profile img {
+        float: left;
+        max-width: 50%;
+        height: auto;
+        margin: -1rem 11px 1rem;
+    }
+
+    .profile {
+        min-width: 470px;
+        margin: 2rem;
+        max-width: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .info {
+        background-color: #fff;
+        margin: 0 3rem 0 4rem;
+        max-width: 700px;
+        box-shadow: 2px 1px 1px black;
+    }
+
+    .info h1 {
+        margin-top: 2rem;
+    }
+
+    .profile h1,
+    .split {
+        font-size: 2.2rem;
+        top: -2px;
+        width: fit-content;
+        left: 18rem;
+    }
+
+    .workSection {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        max-width: none;
+        gap: 1rem;
+    }
+
+    main h2 {
+        margin-top: 1rem;
+    }
+
+    .contact-container {
+        display: flex;
+    }
+
+    .profile-ft img {
+        max-width: 380px;
+        object-fit: cover;
+        margin: 1rem 0 1rem 0;
+    }
 }
