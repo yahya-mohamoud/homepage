@@ -10,7 +10,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* outline: 2px solid red !important; */
 }
 
 body {
@@ -26,10 +25,10 @@ header {
     background-color: var(--cl-blue);
     transform: skewY(-22deg);
     position: absolute;
-    top: min(-88px, -131px);
+    top: -131px;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: -10;
 }
 
 .icons {
@@ -284,5 +283,50 @@ address {
         max-width: 380px;
         object-fit: cover;
         margin: 1rem 0 1rem 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .hero {
+        position: relative;
+    }
+
+    .info {
+        padding: 1rem 2rem;
+        margin: 0;
+        max-width: 968px;
+        font-size: 1rem;
+        position: absolute;
+        top: 3rem;
+        left: 43%;
+        z-index: -1;
+        box-shadow: 7px 10px 12px 4px rgb(46, 56, 54);
+    }
+
+    .profile h1, .split {
+        font-size: 3.7rem;
+        top: 25rem;
+        width: fit-content;
+        left: 1rem;
+    }
+
+    .skewedRectangle {
+        min-height: 650px;
+        transform: skewY(-17deg);
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .profile img {
+        display: block;
+        float: initial;
+        margin: 0 -20px;
+    }
+
+    .workSection {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
     }
 }
